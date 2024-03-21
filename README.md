@@ -13,11 +13,16 @@ cd animedb
 pip install -r requirements.txt
 ```
 ## Usage
-To run the spider, navigate to the project directory containing the scrapy.cfg file and run:
+### To run the spider and output the data to a CSV file, use the following command:
 ```bash
-scrapy crawl animes
+scrapy crawl animes -o anime.csv
 ```
-The spider will start crawling AniDB and extract the specified information.
+### To output the data to a JSON file, use the following command:
+
+```bash
+scrapy crawl animes -o anime.json
+```
+The spider will start crawling AniDB and extract the specified information, saving it to the specified file in either CSV or JSON format.
 
 ## Spider
 The main spider (AnimesSpider) is located in animedb/spiders/animes.py. It crawls AniDB to extract anime information.
